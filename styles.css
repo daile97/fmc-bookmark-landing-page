@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+:root {
+ --soft-blue: hsl(231, 69%, 60%);
+ --soft-red: hsl(231, 69%, 60%);
+ --grayish-blue: hsl(229, 8%, 60%);
+ --very-dark-blue: hsl(229, 31%, 21%)
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  min-width: 100vw;
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+  text-align: center;
+  color: var(--very-dark-blue);
+}
+
+img {
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  position: sticky;
+  top: 0;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.25em 1.5em;
+}
+
+#header-nav {
+  position: absolute;
+  display: none;
+}
+
+#close-icon {
+  display: none;
+}
+
+header button {
+  display: none;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-banner {
+  margin-top: 2em;
+  position: relative;
+}
+
+.hero-banner::after {
+  content: '';
+  position: absolute;
+  width: 85%;
+  height: 80%;
+  bottom: 0;
+  right: 0;
+  background-color: var(--soft-blue);
+  z-index: -1;
+  border-bottom-left-radius: 50%
+}
+
+#hero-illustration {
+  width: 95%;
+  margin: 0 auto;
+}
+
