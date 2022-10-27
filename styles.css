@@ -1,20 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
 :root {
- --soft-blue: hsl(231, 69%, 60%);
- --soft-red: hsl(231, 69%, 60%);
- --grayish-blue: hsl(229, 8%, 60%);
- --very-dark-blue: hsl(229, 31%, 21%)
+  --soft-blue: hsl(231, 69%, 60%);
+  --soft-red: hsl(231, 69%, 60%);
+  --grayish-blue: hsl(229, 8%, 60%);
+  --very-dark-blue: hsl(229, 31%, 21%);
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   min-width: 100vw;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   font-size: 18px;
   text-align: center;
   color: var(--very-dark-blue);
@@ -28,9 +31,41 @@ ul {
   list-style: none;
 }
 
+button {
+  outline: none;
+  border: none;
+}
+
+.hero-btn {
+  padding: 1.1em;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+.hero-btn:active {
+  transform: scale(0.95);
+}
+
+.btn-blue {
+  background-color: var(--soft-blue);
+  color: white;
+  box-shadow: -1px 4px 4px 1px #ddf;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.btn-white {
+  background-color: #eef;
+  box-shadow: -1px 4px 4px 1px #dde;
+  font-weight: 700;
+}
+
 header {
   position: sticky;
   top: 0;
+  background-color: white;
+  z-index: 100;
 }
 
 .header-container {
@@ -64,7 +99,7 @@ header button {
 }
 
 .hero-banner::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 85%;
   height: 80%;
@@ -72,7 +107,7 @@ header button {
   right: 0;
   background-color: var(--soft-blue);
   z-index: -1;
-  border-bottom-left-radius: 50%
+  border-bottom-left-radius: 50%;
 }
 
 #hero-illustration {
@@ -80,3 +115,163 @@ header button {
   margin: 0 auto;
 }
 
+.hero-welcome h1 {
+  font-weight: 500;
+  font-size: 1.75rem;
+  margin-top: 1.6em;
+}
+
+p {
+  font-size: 0.85rem;
+  line-height: 1.6em;
+  opacity: 0.5;
+  margin: 0.8em 0 2em;
+  padding: 0 2em;
+}
+
+.hero-welcome p {
+  margin: 1.5em 0 2.2em;
+}
+
+.hero-btns {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+#hero {
+  padding-bottom: 4.5em;
+}
+
+.features-intro {
+  padding-top: 3.5em;
+}
+
+.features-intro h2 {
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  margin: 0 auto 2em;
+  border-top: 1px solid #999a;
+}
+
+.tab-btn {
+  background-color: white;
+  border-bottom: 1px solid #999;
+  padding: 1.2em 0;
+  font-size: 0.9rem;
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.features-img img {
+  margin: 0 auto;
+  height: 85%;
+}
+
+.features-img {
+  width: 100%;
+  position: relative;
+  height: 240px;
+  margin-top: 1.95em;
+  margin-bottom: 2em;
+}
+
+.features-img::after {
+  position: absolute;
+  content: "";
+  height: 60%;
+  width: 290px;
+  border-bottom-right-radius: 30%;
+  border-top-right-radius: 30%;
+  bottom: 0;
+  left: 0;
+  background-color: var(--soft-blue);
+  z-index: -1;
+}
+
+.features-img::before {
+  position: absolute;
+  content: "";
+  height: 35%;
+  width: 50%;
+  bottom: 50%;
+  left: 0;
+  background-color: var(--soft-blue);
+  z-index: -1;
+}
+
+.info-btn {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.active {
+  opacity: 1;
+  position: relative;
+}
+.active::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  background-color: red;
+  width: 40%;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#download-options {
+  margin-top: 6.5em;
+}
+
+#download-options h2 {
+  font-size: 1.2rem;
+}
+
+.download-options__cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3em;
+  gap: 3em;
+}
+
+.download-options__card {
+  width: 75%;
+  background: url(images/bg-dots.svg);
+  background-position: center 73%;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px 1px #0033;
+  padding-top: 3em;
+  padding-bottom: 1.5em;
+}
+
+.download-options__card h3 {
+  font-size: 1rem;
+  margin-top: 2em;
+}
+
+.download-options__card p {
+  margin-top: 0.5em;
+  margin-bottom: 4em;
+}
+
+.download-options__card button {
+  padding: 1em 2.5em;
+}
